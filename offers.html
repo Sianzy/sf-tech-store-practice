@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers & Subscriptions | Bean Boutique</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="custom-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><i class="fas fa-coffee"></i> Bean Boutique</a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="coffee.html">Coffee Selection</a>
+                <a href="equipment.html">Equipment</a>
+                <a href="events.html">Events</a>
+                <a href="offers.html" class="active">Offers</a>
+                <a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i> Cart (<span id="cart-count">0</span>)</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-container">
+        <h1 class="page-title">Special Offers & Coffee Subscriptions</h1>
+        <p class="page-subtitle">Save continuously and keep your home pantry stocked automatically.</p>
+
+        <h2 class="section-divider-title">Subscription Tiers</h2>
+        <div class="tiers-container">
+            <div class="tier-card">
+                <h3>The Casual Sipper</h3>
+                <div class="tier-price"><span>$28</span> / Month</div>
+                <ul class="tier-features">
+                    <li><i class="fas fa-check"></i> 2 Bags Roasted Origin Coffee</li>
+                    <li><i class="fas fa-check"></i> Monthly Brewing Tips Info Sheet</li>
+                    <li><i class="fas fa-check"></i> Standard Free Shipping</li>
+                </ul>
+                <button class="btn-tier" onclick="addSubscriptionToCart('Casual Sipper Subscription', 28.00)">Select Tier</button>
+            </div>
+
+            <div class="tier-card featured">
+                <div class="ribbon">POPULAR</div>
+                <h3>The Connoisseur</h3>
+                <div class="tier-price"><span>$49</span> / Month</div>
+                <ul class="tier-features">
+                    <li><i class="fas fa-check"></i> 4 Curated Micro-lot Bags</li>
+                    <li><i class="fas fa-check"></i> Early RSVP to Cafe Events</li>
+                    <li><i class="fas fa-check"></i> Priority Express Shipping</li>
+                </ul>
+                <button class="btn-tier featured-btn" onclick="addSubscriptionToCart('Connoisseur Subscription', 49.00)">Select Tier</button>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark text-light py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h4 class="text-warning mb-3">Bean Boutique</h4>
+                    <p class="small text-muted">Elevating your daily coffee ritual into an intentional experience of
+                        flavor and community.</p>
+                    <p class="small text-success mt-3"><i class="fas fa-shield-alt me-1"></i> SSL Secured & Encrypted
+                        Checkout</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-warning mb-3">Find Our Shop</h5>
+                    <div class="ratio ratio-4x3" style="max-height: 150px;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1486.3708598989376!2d96.14095833439272!3d16.80312479884484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2smm!4v1778569187419!5m2!1sen!2smm"
+                            allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <h5 class="text-warning mb-3">Follow The Community</h5>
+                    <div class="d-flex justify-content-md-end gap-3 fs-4">
+                        <a href="https://www.instagram.com/" class="text-light text-decoration-none" target="_blank">
+                            <i class="fab fa-instagram instagram-hover"></i>
+                        </a>
+                        <a href="https://www.facebook.com/" class="text-light text-decoration-none" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fab fa-facebook facebook-hover"></i>
+                        </a>
+
+                        <a href="https://www.pinterest.com/" class="text-light text-decoration-none" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fab fa-pinterest pinterest-hover"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <p class="text-center small text-muted mb-0">&copy; 2026 Bean Boutique. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

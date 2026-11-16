@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brewing Equipment | Bean Boutique</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="custom-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><i class="fas fa-coffee"></i> Bean Boutique</a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="coffee.html" >Coffee Selection</a>
+                <a href="equipment.html" class="active">Equipment</a>
+                <a href="events.html">Events</a>
+                <a href="offers.html">Offers</a>
+
+                <input type="text" id="product-search" class="product-search" placeholder="Search equipment..."
+                    onkeyup="handleProductSearch()">
+
+                <a href="cart.html" class="cart-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    Cart (<span id="cart-count">0</span>)
+                    <span id="nav-cart-product"></span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-container">
+        <h1 class="page-title">Brewing Gear</h1>
+        <p class="page-subtitle">Professional tools designed to unlock ultimate flavors at home.</p>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="image/Kettle.png"
+                    alt="Precision Gooseneck Kettle">
+                <div class="card-content">
+                    <h2>Precision Gooseneck Kettle</h2>
+                    <p class="description">A professional kettle designed with a narrow spout for accurate water flow
+                        and better control during pour-over brewing.</p>
+                    <p class="tip"><strong>Barista Tip:</strong> Keep a slow and steady pouring speed to achieve an even
+                        extraction from coffee grounds.</p>
+                    <div class="card-footer">
+                        <span class="price">$95.00</span>
+                        <button class="btn-add-cart" onclick="addToCart('Precision Gooseneck Kettle', 95.00)">Add to
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-card">
+                <img src="image/FrenchPress.png"
+                    alt="Classic French Press">
+                <div class="card-content">
+                    <h3>Classic 8-Cup French Press</h3>
+                    <p class="description">A durable glass French press that creates a rich and full-bodied coffee by
+                        using full immersion brewing.</p>
+                    <p class="tip"><strong>Barista Tip:</strong> Use coarse coffee grounds and steep for around 4
+                        minutes before pressing.</p>
+                    <div class="card-footer">
+                        <span class="price">$35.00</span>
+                        <button class="btn-add-cart" onclick="addToCart('Classic 8-Cup French Press', 35.00)">Add to
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-card">
+                <img src="image/EspressoMachine.png"
+                    alt="Espresso Machine">
+                <div class="card-content">
+                    <h3>Professional Espresso Machine</h3>
+                    <p class="description">A high-performance espresso machine built for creating rich espresso shots
+                        with consistent pressure and temperature control.</p>
+                    <p class="tip"><strong>Barista Tip:</strong> Grind coffee beans freshly before brewing to improve
+                        espresso flavor.</p>
+                    <div class="card-footer">
+                        <span class="price">$850.00</span>
+                        <button class="btn-add-cart" onclick="addToCart('Professional Espresso Machine', 850.00)">Add to
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-card">
+                <img src="image/Grinder.png"
+                    alt="Coffee Grinder">
+                <div class="card-content">
+                    <h3>Premium Burr Coffee Grinder</h3>
+                    <p class="description">A precision grinder that produces consistent coffee grounds for espresso and
+                        filter brewing methods.</p>
+                    <p class="tip"><strong>Barista Tip:</strong> Adjust grind size depending on your brewing method for
+                        the best extraction.</p>
+                    <div class="card-footer">
+                        <span class="price">$120.00</span>
+                        <button class="btn-add-cart" onclick="addToCart('Premium Burr Coffee Grinder', 120.00)">Add to
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-card">
+                <img src="image/PourOver.png"
+                    alt="Pour Over Dripper">
+                <div class="card-content">
+                    <h3>Glass Pour Over Dripper</h3>
+                    <p class="description">A simple and elegant brewing tool that allows complete control over water
+                        flow and coffee extraction.</p>
+                    <p class="tip"><strong>Barista Tip:</strong> Wet the filter first to remove paper taste and improve
+                        coffee clarity.</p>
+                    <div class="card-footer">
+                        <span class="price">$25.00</span>
+                        <button class="btn-add-cart" onclick="addToCart('Glass Pour Over Dripper', 25.00)">Add to
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-card">
+                <img src="image/Scale.png"
+                    alt="Coffee Scale">
+                <div class="card-content">
+                    <h3>Digital Coffee Brewing Scale</h3>
+                    <p class="description">A precise coffee scale with timer functions to measure coffee and water
+                        accurately.</p>
+                    <p class="tip"><strong>Barista Tip:</strong> Use a consistent coffee-to-water ratio for repeatable
+                        results.</p>
+                    <div class="card-footer">
+                        <span class="price">$45.00</span>
+                        <button class="btn-add-cart" onclick="addToCart('Digital Coffee Brewing Scale', 45.00)">Add to
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-card">
+                <img src="image/MokaPot.png"
+                    alt="Moka Pot">
+                <div class="card-content">
+                    <h3>Classic Italian Moka Pot</h3>
+                    <p class="description">A traditional stovetop brewer that creates strong, espresso-style coffee with
+                        rich flavor.</p>
+                    <p class="tip"><strong>Barista Tip:</strong> Use medium-fine coffee grounds and avoid overheating
+                        during brewing.</p>
+                    <div class="card-footer">
+                        <span class="price">$40.00</span>
+                        <button class="btn-add-cart" onclick="addToCart('Classic Italian Moka Pot', 40.00)">Add to
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark text-light py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h4 class="text-warning mb-3">Bean Boutique</h4>
+                    <p class="small text-muted">Elevating your daily coffee ritual into an intentional experience of
+                        flavor and community.</p>
+                    <p class="small text-success mt-3"><i class="fas fa-shield-alt me-1"></i> SSL Secured & Encrypted
+                        Checkout</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-warning mb-3">Find Our Shop</h5>
+                    <div class="ratio ratio-4x3" style="max-height: 150px;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1486.3708598989376!2d96.14095833439272!3d16.80312479884484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2smm!4v1778569187419!5m2!1sen!2smm"
+                            allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <h5 class="text-warning mb-3">Follow The Community</h5>
+                    <div class="d-flex justify-content-md-end gap-3 fs-4">
+                        <a href="https://www.instagram.com/" class="text-light text-decoration-none" target="_blank">
+                            <i class="fab fa-instagram instagram-hover"></i>
+                        </a>
+                        <a href="https://www.facebook.com/" class="text-light text-decoration-none" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fab fa-facebook facebook-hover"></i>
+                        </a>
+
+                        <a href="https://www.pinterest.com/" class="text-light text-decoration-none" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fab fa-pinterest pinterest-hover"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <p class="text-center small text-muted mb-0">&copy; 2026 Bean Boutique. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

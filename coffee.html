@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Selection | Bean Boutique</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="custom-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><i class="fas fa-coffee"></i> Bean Boutique</a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="coffee.html" class="active">Coffee Selection</a>
+                <a href="equipment.html">Equipment</a>
+                <a href="events.html">Events</a>
+                <a href="offers.html">Offers</a>
+
+                <input type="text" id="product-search" class="product-search" placeholder="Search coffee..."
+                    onkeyup="handleProductSearch()">
+
+                <a href="cart.html" class="cart-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    Cart (<span id="cart-count">0</span>)
+                    <span id="nav-cart-product"></span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-container">
+        <h1 class="page-title">Our Unique Coffee Blends</h1>
+        <p class="page-subtitle">Ethically sourced, freshly roasted, curated for the modern palate.</p>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="image/ethopian.jpg"
+                    alt="Ethiopian Yirgacheffe">
+                <div class="card-content">
+                    <h2>Ethiopian Yirgacheffe</h2>
+                    <p class="description">A premium light roast single-origin coffee with delicate floral aromas and
+                        bright citrus flavors.</p>
+                    <p class="notes"><strong>Tasting Notes:</strong> Lemon, Jasmine, Honey</p>
+                    <p class="method"><strong>Recommended Brew:</strong> Pour Over / V60</p>
+                    <div class="card-footer">
+                        <span class="price">$18.50</span>
+                        <button class="btn-add-cart" onclick="addToCart('Ethiopian Yirgacheffe', 18.50)">Add to
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="image/Supremo.png"
+                    alt="Colombian Supremo">
+                <div class="card-content">
+                    <h3>Colombian Supremo</h3>
+                    <p class="description">A medium roast coffee with a smooth body, balanced sweetness, and mild
+                        acidity.</p>
+                    <p class="notes"><strong>Tasting Notes:</strong> Caramel, Red Apple, Milk Chocolate</p>
+                    <p class="method"><strong>Recommended Brew:</strong> Drip Coffee / French Press</p>
+                    <div class="card-footer">
+                        <span class="price">$17.00</span>
+                        <button class="btn-add-cart" onclick="addToCart('Colombian Supremo', 17.00)">Add to
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="image/Santos.png"
+                    alt="Brazil Santos">
+                <div class="card-content">
+                    <h3>Brazil Santos</h3>
+                    <p class="description">A classic Brazilian coffee known for its nutty sweetness and creamy body.</p>
+                    <p class="notes"><strong>Tasting Notes:</strong> Hazelnut, Cocoa, Brown Sugar</p>
+                    <p class="method"><strong>Recommended Brew:</strong> Espresso / Moka Pot</p>
+                    <div class="card-footer">
+                        <span class="price">$16.75</span>
+                        <button class="btn-add-cart" onclick="addToCart('Brazil Santos', 16.75)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="image/Guatemala.png"
+                    alt="Guatemala Antigua">
+                <div class="card-content">
+                    <h3>Guatemala Antigua</h3>
+                    <p class="description">A full-bodied coffee grown in volcanic soil with a rich aroma and vibrant
+                        flavor.</p>
+                    <p class="notes"><strong>Tasting Notes:</strong> Dark Chocolate, Orange, Spice</p>
+                    <p class="method"><strong>Recommended Brew:</strong> Chemex / Pour Over</p>
+                    <div class="card-footer">
+                        <span class="price">$19.25</span>
+                        <button class="btn-add-cart" onclick="addToCart('Guatemala Antigua', 19.25)">Add to
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="image/Sumatra.png"
+                    alt="Sumatra Mandheling">
+                <div class="card-content">
+                    <h3>Sumatra Mandheling</h3>
+                    <p class="description">A bold dark roast with low acidity and an earthy, syrupy body.</p>
+                    <p class="notes"><strong>Tasting Notes:</strong> Cedar, Dark Chocolate, Tobacco</p>
+                    <p class="method"><strong>Recommended Brew:</strong> French Press / Espresso</p>
+                    <div class="card-footer">
+                        <span class="price">$20.00</span>
+                        <button class="btn-add-cart" onclick="addToCart('Sumatra Mandheling', 20.00)">Add to
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="image/Kenya.png"
+                    alt="Kenya AA">
+                <div class="card-content">
+                    <h3>Kenya AA</h3>
+                    <p class="description">A bright and lively coffee prized for its juicy acidity and fruity sweetness.
+                    </p>
+                    <p class="notes"><strong>Tasting Notes:</strong> Blackcurrant, Grapefruit, Brown Sugar</p>
+                    <p class="method"><strong>Recommended Brew:</strong> AeroPress / Pour Over</p>
+                    <div class="card-footer">
+                        <span class="price">$19.75</span>
+                        <button class="btn-add-cart" onclick="addToCart('Kenya AA', 19.75)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="image/BlueMountain.png"
+                    alt="Jamaica Blue Mountain">
+                <div class="card-content">
+                    <h3>Jamaica Blue Mountain</h3>
+                    <p class="description">One of the world's most sought-after coffees, known for its exceptionally
+                        smooth body and balanced flavor.</p>
+                    <p class="notes"><strong>Tasting Notes:</strong> Milk Chocolate, Citrus, Sweet Herbs</p>
+                    <p class="method"><strong>Recommended Brew:</strong> Pour Over / French Press</p>
+                    <div class="card-footer">
+                        <span class="price">$28.50</span>
+                        <button class="btn-add-cart" onclick="addToCart('Jamaica Blue Mountain', 28.50)">Add to
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark text-light py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h2 class="text-warning mb-3">Bean Boutique</h2>
+                    <p class="small text-muted">Elevating your daily coffee ritual into an intentional experience of
+                        flavor and community.</p>
+                    <p class="small text-success mt-3"><i class="fas fa-shield-alt me-1"></i> SSL Secured & Encrypted
+                        Checkout</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="text-warning mb-3">Find Our Shop</h3>
+                    <div class="ratio ratio-4x3" style="max-height: 150px;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1486.3708598989376!2d96.14095833439272!3d16.80312479884484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2smm!4v1778569187419!5m2!1sen!2smm"
+                            allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <h4 class="text-warning mb-3">Follow The Community</h4>
+                    <div class="d-flex justify-content-md-end gap-3 fs-4">
+                        <a href="https://www.instagram.com/" class="text-light text-decoration-none" target="_blank">
+                            <i class="fab fa-instagram instagram-hover"></i>
+                        </a>
+                        <a href="https://www.facebook.com/" class="text-light text-decoration-none" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fab fa-facebook facebook-hover"></i>
+                        </a>
+
+                        <a href="https://www.pinterest.com/" class="text-light text-decoration-none" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fab fa-pinterest pinterest-hover"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <p class="text-center small text-muted mb-0">&copy; 2026 Bean Boutique. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | Bean Boutique</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="custom-header">
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                <i class="fas fa-coffee"></i> Bean Boutique
+            </a>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="coffee.html">Coffee Selection</a>
+                <a href="equipment.html">Equipment</a>
+                <a href="events.html">Events</a>
+                <a href="offers.html">Offers</a>
+
+                <a href="cart.html" class="cart-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    Cart (<span id="cart-count">0</span>)
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main class="checkout-page">
+
+        <div class="checkout-container">
+
+            <h1>Order Summary</h1>
+
+            <hr>
+
+            <div id="order-list"></div>
+
+            <div class="checkout-total-row">
+                <span>Grand Total:</span>
+                <span>$<span id="final-price">0.00</span></span>
+            </div>
+
+
+            <div id="form-card">
+
+                <h2>Customer Information</h2>
+
+                <form id="custForm" autocomplete="off">
+
+                    <div class="checkout-form-group">
+                        <input
+                            type="text"
+                            id="cust-name"
+                            placeholder="Full Name">
+                    </div>
+
+                    <div class="checkout-form-group">
+                        <input
+                            type="text"
+                            id="cust-phone"
+                            placeholder="Phone Number">
+                    </div>
+
+                    <div class="checkout-form-group">
+                        <input
+                            type="text"
+                            id="cust-email"
+                            placeholder="email@gmail.com">
+                    </div>
+
+                    <button class="checkout-confirm-btn" type="submit">
+                        Confirm Order
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <div id="success-area" class="checkout-success-area">
+
+                <i class="fas fa-check-circle"></i>
+
+                <h3>Order Success!</h3>
+
+                <p>Thank you for your purchase.</p>
+
+                <a href="index.html" class="checkout-back-btn">
+                    Back to Shop
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="js/checkout.js"></script>
+
+</body>
+
+</html>
